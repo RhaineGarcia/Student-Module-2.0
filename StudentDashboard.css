@@ -1,0 +1,486 @@
+﻿/* ==========================================================
+   STUDENT DASHBOARD
+   ========================================================== */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e8f5e9 !important;
+}
+
+
+/* ==========================================================
+   MAIN DASHBOARD
+   ========================================================== */
+
+.student-dashboard {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.dashboard-header {
+    width: 100%;
+    min-height: 82px;
+    padding: 0 40px;
+    background: #2a7140 !important;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.15) !important;
+    border-radius: 10px;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.brand-name  {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #ffffff !important;
+}
+
+.brand-name .brand-i {
+    color: #e8b93b !important; 
+}
+
+.brand-MARKA {
+    color: #ffffff !important
+}
+
+
+
+.dashboard-title {
+    font-size: 19px;
+    opacity: 0.95;
+    padding-left: 18px;
+    border-left: 2px solid #e8b93b;
+    color: #ffffff !important;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.student-id {
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.95;
+    color: #ffffff !important;
+}
+
+
+/* ==========================================================
+   LOGOUT
+   ========================================================== */
+
+.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+
+
+.btn-logout {
+    background: #e8b93b !important;
+    color: #2e7d37 !important;
+    border-radius: 20px !important;
+}
+
+
+    .btn-logout:hover {
+        background: #eeeae4;
+    }
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.dashboard-content {
+    width: 100%;
+    flex: 1;
+    padding: 28px 40px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* ==========================================================
+   STUDENT INFORMATION CARD
+   ========================================================== */
+
+.student-info-card,
+.subjects-card {
+    width: 100%;
+    background: #f4faf5;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #000000 !important;
+}
+
+
+/* ==========================================================
+   SECTION HEADING
+   ========================================================== */
+
+.section-heading {
+    padding: 22px 26px;
+    border-bottom: 1px solid #e5e1dc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+    .section-heading h2 {
+        margin: 0;
+        font-size: 21px;
+        color: #1b5e20 !important;
+    }
+
+
+    .section-heading p {
+        margin: 6px 0 0;
+        font-size: 13px;
+        color: #77716a;
+    }
+
+
+/* ==========================================================
+   STUDENT DETAILS
+   ========================================================== */
+
+.student-details {
+    padding: 24px 26px;
+}
+
+
+.student-details-text {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1b5e20 !important;
+}
+
+
+/* ==========================================================
+   SUBJECT TABLE
+   ========================================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+   
+}
+
+
+.subjects-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    
+}
+
+
+    .subjects-table th {
+        background: #3b5d3b !important;
+        color: #ffffff !important;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 15px 18px;
+        white-space: nowrap;
+        border-right: 1px solid #4a6b53;
+        border-bottom: 2px solid #1c3023;
+    }
+
+
+    .subjects-table td {
+        padding: 16px 18px;
+        border-bottom: 1px solid #eeeae4;
+        color: #2e3b2e !important;
+        font-size: 14px;
+        vertical-align: middle;
+        border-right: 1px solid #b0c2b4;
+        border-bottom: 1px solid #b0c2b4;
+    }
+
+
+    .subjects-table tr:last-child td {
+        border-bottom: none;
+      
+    }
+
+
+    .subjects-table tr:hover td {
+        background: #ffffff;
+    }
+
+    .subject-row:hover td {
+        background: #ffffff;
+    }
+
+.expand-cell {
+    width: 40px;
+    text-align: center !important;
+}
+
+.chevron {
+    display: inline-block;
+    color: #2f4b37;
+    font-size: 13px;
+    transform: rotate(180deg)
+}
+
+
+    /* ==========================================================
+   COLUMN EMPHASIS
+   ========================================================== */
+
+    .subjects-table th:first-child,
+    .subjects-table td:first-child {
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+
+    .subjects-table th:nth-child(3),
+    .subjects-table td:nth-child(3) {
+        text-align: center;
+        width: 80px;
+    }
+
+
+    .subjects-table th:nth-child(5),
+    .subjects-table td:nth-child(5) {
+        text-align: center;
+        white-space: nowrap;
+    }
+
+
+    .subjects-table th:nth-child(6),
+    .subjects-table td:nth-child(6) {
+        text-align: center;
+        white-space: nowrap;
+    }
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.dashboard-footer {
+    width: 100%;
+    padding: 16px 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #3b5d3b !important;
+    background: #eef6ee !important;
+    border-top: 1px solid #dbeadc !important;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .dashboard-header {
+        padding: 18px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+
+    .dashboard-content {
+        padding: 22px 24px 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        padding: 18px;
+    }
+
+
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+
+    .dashboard-title {
+        padding-left: 0;
+        border-left: none;
+    }
+
+
+    .header-right {
+        align-items: center;
+    }
+
+
+    .student-id {
+        font-size: 13px;
+    }
+
+
+    .dashboard-content {
+        padding: 16px;
+    }
+
+
+    .section-heading {
+        padding: 18px;
+    }
+
+
+    .student-details {
+        padding: 18px;
+    }
+
+
+    .subjects-table th,
+    .subjects-table td {
+        padding: 13px 12px;
+        font-size: 13px;
+    }
+
+
+    .dashboard-footer {
+        padding: 14px 18px;
+    }
+}
+/* ==========================================================
+   FIXED ACCORDION TOGGLE & ARROW ROTATION
+   ========================================================== */
+
+/* 1. Explicitly hide the dropdown row completely by default */
+.subjects-table tr.nested-details-row {
+    display: none !important;
+}
+
+/* 2. Target the specific row following a checked checkbox and show it */
+.toggle-checkbox:checked ~ th + tr.nested-details-row,
+.toggle-checkbox:checked ~ td + tr.nested-details-row,
+tr:has(.toggle-checkbox:checked) + tr.nested-details-row {
+    display: table-row !important;
+}
+
+/* 3. Pointer configuration for the label container */
+.chevron-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px;
+}
+
+    /* 4. Points LEFT default (0 degrees rotation for a left-facing chevron '❮') */
+    .chevron-label .chevron {
+        display: inline-block;
+        transition: transform 0.2s ease;
+        transform: rotate(0deg);
+        color: #2f4b37;
+        font-size: 13px;
+    }
+
+/* 5. Points DOWN when clicked (Rotates 270 degrees clockwise or 90 degrees counter-clockwise) */
+.toggle-checkbox:checked + .chevron-label .chevron {
+    transform: rotate(-90deg);
+    color: #2f4b37;
+}
+
+
+/* ==========================================================
+   DROPDOWN PANEL FULL-WIDTH DESIGN STYLING
+   ========================================================== */
+.nested-details-row td {
+    padding: 0 !important;
+    background-color: #2a7140 !important; /* Your signature dark green design */
+    border: none !important;
+}
+
+.dropdown-panel {
+    padding: 24px 40px;
+    color: #ffffff;
+}
+
+.grade-category {
+    margin-bottom: 16px;
+}
+
+    .grade-category:last-child {
+        margin-bottom: 0;
+    }
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.category-weight {
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.grade-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    opacity: 0.95;
+}
